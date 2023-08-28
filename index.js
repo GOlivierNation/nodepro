@@ -6,3 +6,11 @@ var mysqlconnection = mysql.createConnection({
     password: '',
     database: 'employee'
 });
+
+mysqlconnection.connect((err)=>{
+    if(!err)
+        console.log('Connection done');
+    else
+        console.log('connection failed \n Error: ' + JSON.stringify(err, undefined));
+
+})
